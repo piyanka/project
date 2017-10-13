@@ -3,8 +3,10 @@ var app =express();
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport =require('passport');
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
 var  FacebookStrategy = require('passport-facebook').Strategy;
-//set middleware
+mongoose.connect('mongodb://localhost:3000');
 
 app.use(bodyParser.json());
 app.use(session({
