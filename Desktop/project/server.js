@@ -14,7 +14,7 @@ app.use(session({
 }));
 
 var FACEBOOK_APP_ID = '248164509038824',
- FACEBOOK_APP_SECRET = '7b83ea9bb3f14e378b0afe1529985ba9',
+ FACEBOOK_APP_SECRET = '7b83ea9bb3f14e378b0afe1529985ba9'
 
 var  fbOpts = {
 
@@ -22,7 +22,7 @@ var  fbOpts = {
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
     callbackURL: "http://localhost:3000/auth/facebook/callback",
-    profileFields: ['emails']
+    profileFields: ['id', 'displayName', 'photos','email','gender']
   
   };
 
